@@ -1,9 +1,14 @@
 import React from 'react';
+import { useLoaderData } from 'react-router';
 
 const PostDetails = () => {
+
+    const post = useLoaderData();
+    const {title,body} = post;
     return (
-        <div>
-            <P>hello</P>
+        <div style={{maxWidth:'800px'}}>
+            <p>{title}</p>
+            <p>{body}</p>
         </div>
     );
 };
