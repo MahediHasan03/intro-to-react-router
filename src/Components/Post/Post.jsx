@@ -3,14 +3,15 @@ import '../User/User.css'
 import { Link, useNavigate } from 'react-router';
 
 const Post = ({post}) => {
+    const {id, title, userId} = post;
+    
     const navigate = useNavigate();
 
     const handleNavigate = ()=> {
-        navigate('/laptops')
+        navigate(`/posts/${id}`);
     }
 
-    const {id, title, userId} = post;
-
+    
     return (
         <div className='card'>
             <p>User ID: {userId}</p>

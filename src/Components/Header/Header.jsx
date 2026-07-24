@@ -12,7 +12,11 @@ const Header = () => {
                 <NavLink to='/laptops'>Laptops</NavLink>
                 <NavLink to='/users'>Users</NavLink>
                 <NavLink to='/users2'>Users 2</NavLink>
-                <NavLink to='/posts'>Posts</NavLink>
+                <NavLink to='/posts'>
+                {
+                    ({isPending}) => (<span>Post {isPending && <p>Loading.........</p>}</span>)
+                }
+                </NavLink>
 
             </nav>
         </div>
